@@ -221,7 +221,7 @@ p { margin: 0; }
 .photo-band h2 { color: var(--white); font-size: clamp(38px, 6vw, 64px); }
 
 .work-card { padding: 0; overflow: hidden; }
-.work-card > img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.work-card > img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; background: #141414; }
 .work-body { padding: 28px 32px 32px; }
 
 .mini-photo-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 32px; }
