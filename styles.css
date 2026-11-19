@@ -194,3 +194,51 @@ p { margin: 0; }
   .company-card { transition: none; }
   .company-card:hover { transform: none; }
 }
+
+/* Photography */
+.hero { background: linear-gradient(90deg, rgba(19, 19, 19, .95) 0%, rgba(19, 19, 19, .82) 55%, rgba(19, 19, 19, .6) 100%), url("img/photos/hero-bg.jpg") center / cover no-repeat var(--ink-900); }
+.frame img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+
+.photo-strip { display: grid; grid-template-columns: repeat(5, 1fr); background: var(--ink-900); }
+.photo-strip img { width: 100%; height: 240px; object-fit: cover; }
+
+.art { overflow: hidden; }
+.art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease-out; }
+.company-card:hover .art img { transform: scale(1.05); }
+.tag { z-index: 1; }
+
+.section-dark { background: linear-gradient(rgba(19, 19, 19, .9), rgba(19, 19, 19, .9)), url("img/photos/trades-bg.jpg") center / cover no-repeat var(--ink-900); }
+.benefit { padding: 0; overflow: hidden; }
+.benefit > img, .step > img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+.benefit-body { padding: 24px 28px 28px; }
+
+.step { padding: 0; overflow: hidden; }
+.step-body { padding: 24px 28px 28px; }
+
+.photo-band { display: flex; align-items: center; min-height: 440px; padding: 72px 0; background: linear-gradient(rgba(19, 19, 19, .45), rgba(19, 19, 19, .65)), url("img/photos/band-skyline.jpg") center / cover no-repeat var(--ink-900); text-align: center; }
+.photo-band .wrap { width: 100%; }
+.photo-band .overline { color: var(--white); }
+.photo-band h2 { color: var(--white); font-size: clamp(38px, 6vw, 64px); }
+
+.work-card { padding: 0; overflow: hidden; }
+.work-card > img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.work-body { padding: 28px 32px 32px; }
+
+.mini-photo-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 32px; }
+.mini-photo-row img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 3px; }
+
+.cta-banner { padding: 112px 0; background: linear-gradient(rgba(203, 8, 14, .88), rgba(165, 6, 11, .9)), url("img/photos/cta-bg.jpg") center / cover no-repeat var(--red-500); }
+
+@media (max-width: 980px) {
+  .hero { background: linear-gradient(rgba(19, 19, 19, .86), rgba(19, 19, 19, .9)), url("img/photos/hero-bg.jpg") center / cover no-repeat var(--ink-900); }
+  .photo-strip { grid-template-columns: repeat(2, 1fr); }
+  .photo-strip img { height: 180px; }
+  .photo-strip img:first-child { grid-column: 1 / -1; }
+  .photo-band { min-height: 340px; }
+  .cta-banner { padding: 80px 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .art img { transition: none; }
+  .company-card:hover .art img { transform: none; }
+}
